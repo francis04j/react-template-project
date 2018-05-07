@@ -44,3 +44,5 @@ class CreateUserPage extends Component {
 CreateUserPage.propTypes = {
     user: PropTypes.object
 };
+
+export default CreateUserPage;

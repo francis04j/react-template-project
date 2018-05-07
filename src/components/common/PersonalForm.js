@@ -1,5 +1,5 @@
 import React from 'react';
-import FormGroup from 'reactstrap';
+import { FormGroup } from 'reactstrap';
 import { AvField } from 'availity-reactstrap-validation';
 
 const PersonalForm = () => (

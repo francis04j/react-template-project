@@ -5,9 +5,7 @@ Create a reacr-simple page application template
 	
 	
 	should be able to create a user
-		--add lint to project (packpage.json and test)
-		-- Research how to link create page to public (via route?)
-		-- do linking to (to be created register page, can rename create user page)
+			
 		--do submit action
 		-- submit to database
 	user should be able to register basics
