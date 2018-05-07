@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col, Card, CardBody, FormGroup, Button } from 'reactstrap';
-import { AvForm, AvField } from 'availity-reactstrap-validation';
+import { AvForm } from 'availity-reactstrap-validation';
 import { Link } from 'react-router-dom';
 import PersonalForm from '../common/PersonalForm';
 
-
 class CreateUserPage extends Component {
-    constructor(props) {
-        super(props);
-    }   
-   
-
     render() {
-       
         return (
             <Row className="justify-content-md-center">
                 <Col lg={8}>
@@ -25,11 +18,9 @@ class CreateUserPage extends Component {
                             </h1>
                             <hr />
 
-                            <AvForm                               
-                                model={this.props.user}>
-                                
+                            <AvForm model={this.props.user}>
                                 <PersonalForm />
-                                
+
                                 <FormGroup className="text-right">
                                     <Link
                                         to="/user"
