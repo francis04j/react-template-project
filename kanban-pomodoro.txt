@@ -12,7 +12,7 @@ Create a reacr-simple page application template
 	user should be able to register budget stuff
 	user should be able to view registration details
 	
-	add reactstrap to tech used in Readme
+	
 	should host somewhere
 	should add dependencies and devDependevies status as here: https://github.com/francis04j/blogPostCodes/blob/master/pwa/README.md
 

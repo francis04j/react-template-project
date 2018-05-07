@@ -9,8 +9,8 @@ This application allows users to manage their weekly-monthly budget.
 
 Technologies used:
 
-React https://github.com/facebook/react/
-React scripts https://www.npmjs.com/package/react-scripts
-Redux https://github.com/reactjs/redux
-CSS
-Yarn 
+- React https://github.com/facebook/react/
+- React scripts https://www.npmjs.com/package/react-scripts
+- Redux https://github.com/reactjs/redux
+- CSS (Bootstrap via Reactstrap) https://reactstrap.github.io/
+- Yarn 
