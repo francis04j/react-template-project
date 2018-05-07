@@ -1,0 +1,17 @@
+version: 1.0.{build}
+
+environment:
+  nodejs_version: "8"
+
+install:
+- ps: Install-Product node 8
+- node -v
+
+build_script:
+- yarn
+- yarn build
+
+artifacts:
+- path: build
+  name: React-Template-Project
+  type: Zip
