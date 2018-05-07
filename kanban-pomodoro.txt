@@ -2,15 +2,21 @@ https://kanbanflow.com/board/7iunLoqv
 Create a reacr-simple page application template
 	a budget managing app.
 	
-	should host somewhere
-	should have good readme --
-	should have good topics ---
-	create-react-app --
-	Should be registered on appVeyor
+	
+	
+	should be able to create a user
+		--add lint to project (packpage.json and test)
+		-- Research how to link create page to public (via route?)
+		-- do linking
+		--do submit action
+		-- submit to database
 	user should be able to register basics
 	user should be able to register budget stuff
 	user should be able to view registration details
 	
+	add reactstrap to tech used in Readme
+	should host somewhere
+	should add dependencies and devDependevies status as here: https://github.com/francis04j/blogPostCodes/blob/master/pwa/README.md
 
 	Entities
 		item
@@ -18,8 +24,12 @@ Create a reacr-simple page application template
 			name
 		user
 			username
+			passowrd
+			email
 			items
 			weekly budget
 			monthly budget
 			weekly savings
 			monthly savings
+			
+			
