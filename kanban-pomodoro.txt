@@ -14,7 +14,9 @@ Create a reacr-simple page application template
 	
 	
 	should host somewhere
-	should add dependencies and devDependevies status as here: https://github.com/francis04j/blogPostCodes/blob/master/pwa/README.md
+	should look into using Switch, Public/private route for routing
+	update personal site
+	listen to hanselminutes, new 100million users
 
 	Entities
 		item
