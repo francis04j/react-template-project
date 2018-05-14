@@ -23,9 +23,14 @@ class CreateUserPage extends Component {
         }
     }
 
+    userRow(user, index) {
+        return <div key={index}>{user.username}</div>;
+    }
+
     render() {
         return (
             <Row className="justify-content-md-center">
+                {this.props.user.map(this.userRow)}
                 <Col lg={8}>
                     <Card className="mb-3">
                         <CardBody>
@@ -58,6 +63,11 @@ class CreateUserPage extends Component {
     }
 }
 
+const mapStateToProps = (state, ownProps) => {
+    return {
+        user: state.user
+    }
+}
 const mapDispatchToProps = dispatch => ({
     createUser: model => dispatch(createUser2(model))
 });
