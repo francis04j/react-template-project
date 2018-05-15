@@ -1,6 +1,6 @@
 export const API_URL = process.env.WEB_API_URL;
 
-const api = async request => {
+const webApi = async request => {
     const { endpoint, method, params, data } = request;
 
     const headers = { 'Content-Type': 'application/json' };
@@ -34,4 +34,4 @@ const api = async request => {
     }
 };
 
-export default api;
+export default webApi;

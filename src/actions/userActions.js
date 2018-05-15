@@ -1,12 +1,12 @@
 import * as actionTypes from '../constants/actionTypes';
 
 // action creators
-export const createUser2 = model => ({
-    endpoint: '/user/register',
-    method: 'POST',
-    data: model,
-    type: actionTypes.CREATE_USER_REQUEST
-});
+// export const createUser2 = model => ({
+//     endpoint: '/user/register',
+//     method: 'POST',
+//     data: model,
+//     type: actionTypes.CREATE_USER_REQUEST
+// });
 
 export const createUser = model => ({
     endpoint: '/user/register',

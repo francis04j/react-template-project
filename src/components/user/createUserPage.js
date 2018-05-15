@@ -4,7 +4,7 @@ import { AvForm } from 'availity-reactstrap-validation';
 import { Link } from 'react-router-dom';
 import PersonalForm from '../common/PersonalForm';
 import { connect } from 'react-redux';
-import { createUser2 } from '../../actions/userActions';
+import { createUser } from '../../actions/userActions';
 
 
 
@@ -30,7 +30,7 @@ class CreateUserPage extends Component {
     render() {
         return (
             <Row className="justify-content-md-center">
-                {this.props.user.map(this.userRow)}
+                {this.props.user}
                 <Col lg={8}>
                     <Card className="mb-3">
                         <CardBody>
@@ -69,7 +69,7 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 const mapDispatchToProps = dispatch => ({
-    createUser: model => dispatch(createUser2(model))
+    createUser: model => dispatch(createUser(model))
 });
 
 export default connect(undefined, mapDispatchToProps)(CreateUserPage);
