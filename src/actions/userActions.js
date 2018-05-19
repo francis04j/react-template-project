@@ -9,7 +9,7 @@ import * as actionTypes from '../constants/actionTypes';
 // });
 
 export const createUser = model => ({
-    endpoint: '/user/register',
+    endpoint: '/register',
     method: 'POST',
     data: model,
     types: [

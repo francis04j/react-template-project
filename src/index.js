@@ -7,7 +7,7 @@ import { Router } from 'react-router';
 import configureStore from './store/configureStore';
 import routes from './routes';
 import history from './history';
-
+import 'bootswatch/dist/darkly/bootstrap.css';
 
 const store = configureStore();
 console.log(store.getState())
