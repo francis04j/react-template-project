@@ -13,8 +13,9 @@ const webApi = async request => {
     }
 
     let body;
-    if (data) { // JSON.stringify(data);
-        body = "";
+    if (data) { 
+        body =  JSON.stringify(data);
+        
     }
 
     try {

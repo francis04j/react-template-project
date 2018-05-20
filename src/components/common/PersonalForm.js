@@ -19,14 +19,14 @@ const PersonalForm = () => (
                 groupAttrs={{ className: 'form-field col-lg-6' }}
             />
             <AvField
-                name="Email"
+                name="email"
                 label="Email"
                 type="email"
                 required
                 groupAttrs={{ className: 'form-field col-lg-6' }}
             />
             <AvField
-                name="Dob"
+                name="dob"
                 label="Date of birth"
                 type="date"
                 groupAttrs={{ className: 'form-field col-lg-6' }}
