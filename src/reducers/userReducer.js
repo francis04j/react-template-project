@@ -1,7 +1,8 @@
 import * as actionTypes from '../constants/actionTypes';
 
 const initialState = {
-    user: undefined
+    user: undefined,
+    users: undefined
 };
 
 const userReducer = (state = initialState, action) => {
@@ -15,6 +16,16 @@ const userReducer = (state = initialState, action) => {
             return {
                 ...state,
                 user: action.data
+            };
+        case actionTypes.GET_USERS_REQUEST:
+            return {
+                ...state,
+                users: undefined
+            };
+        case actionTypes.GET_USERS_SUCCESS:
+            return {
+                ...state,
+                users: action.data
             };
         default:
             return state;

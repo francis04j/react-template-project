@@ -4,6 +4,7 @@ import { Route, NavLink, HashRouter } from 'react-router-dom';
 import Home from './home';
 import Stuff from './stuff';
 import createUser from './components/user/createUserPage';
+import UsersPage from './components/user/UsersPage';
 
 class App extends Component {
     render() {
@@ -31,6 +32,7 @@ class App extends Component {
                         <Route exact path="/" component={Home} />
                         <Route path="/stuff" component={Stuff} />
                         <Route path="/register" component={createUser} />
+                        <Route path="/users" component={UsersPage} />
                     </div>
                 </div>
             </HashRouter>

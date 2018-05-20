@@ -4,8 +4,8 @@ const webApi = async request => {
     const { endpoint, method, params, data } = request;
 
     const headers = { 'Content-Type': 'application/json','Access-Control-Allow-Origin':true };
-   let asdas= 'http://localhost/TheFalcon.WebApi/api/register/index'
-    let url = asdas; // `${asdas}${endpoint}`;
+    let apiUrl= API_URL || 'http://localhost/TheFalcon.WebApi/api';
+    let url = `${apiUrl}${endpoint}`;
     console.log(params);
     if (params) {
         const qs = new URLSearchParams(params);

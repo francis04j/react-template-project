@@ -28,3 +28,13 @@ export const getUser = id => ({
     method: 'GET',
     endpoint: `/user/${encodeURIComponent(id)}`
 });
+
+export const getUsers = () => ({
+    types: [
+        actionTypes.GET_USERS_REQUEST,
+        actionTypes.GET_USERS_SUCCESS,
+        actionTypes.GET_USERS_FAILURE
+    ],
+    method: 'GET',
+    endpoint: '/user'
+});
