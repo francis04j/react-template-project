@@ -1,41 +1,32 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, NavLink, HashRouter } from 'react-router-dom';
-import Home from './home';
-import Stuff from './stuff';
-import createUser from './components/user/createUserPage';
-import UsersPage from './components/user/UsersPage';
+import Header from './components/common/Header';
+import { Container } from 'reactstrap';
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            hasError: false
+        };
+    }
+
+    componentDidCatch() {
+        this.setState({ hasError: true });
+    }
+
     render() {
         return (
-            <HashRouter>
-                <div className="App">
-                    <header className="App-header">
+            <React.Fragment>
+                <Header />
+                <Container>
+                    <div className="App">
                         <h1 className="App-title">My Budget App</h1>
-                        <ul className="header">
-                            <li>
-                                <NavLink exact to="/">
-                                    Home
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/stuff">Stuff</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/register">Create user</NavLink>
-                            </li>
-                        </ul>
-                    </header>
-
-                    <div className="content">
-                        <Route exact path="/" component={Home} />
-                        <Route path="/stuff" component={Stuff} />
-                        <Route path="/register" component={createUser} />
-                        <Route path="/users" component={UsersPage} />
+                       {this.props.children}
                     </div>
-                </div>
-            </HashRouter>
+                </Container>
+            </React.Fragment>            
         );
     }
 }
