@@ -63,11 +63,11 @@ class CreateUserPage extends Component {
     }
 }
 
-const mapStateToProps = (state, ownProps) => {
-    return {
-        user: state.user
-    }
-}
+// const mapStateToProps = (state, ownProps) => {
+//     return {
+//         user: state.user
+//     }
+// }
 const mapDispatchToProps = dispatch => ({
     createUser: model => dispatch(createUser(model))
 });
