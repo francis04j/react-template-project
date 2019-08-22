@@ -60,7 +60,7 @@ class Header extends Component {
         //     currentUser.role.includes(USER_ADMINISTRATOR);
 
         return (
-            <Navbar color="dark" dark expand="lg" fixed="top">
+            <Navbar color="dark" dark expand="lg">
                 <Container>
                     <NavbarBrand to="/" tag={Link}>
                         <FontAwesomeIcon icon={faFeather} fixedWidth /> Falcon

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'; 
 import { Row, Col, Card, CardBody, FormGroup, Button } from 'reactstrap';
 import { AvForm } from 'availity-reactstrap-validation';
 import { Link } from 'react-router-dom';
@@ -6,13 +7,9 @@ import PersonalForm from '../common/PersonalForm';
 import { connect } from 'react-redux';
 import { createUser } from '../../actions/userActions';
 
-
-
 class CreateUserPage extends Component {
-
     constructor(props) {
         super(props);
-
         this.submitForm = this.submitForm.bind(this);
     }
 
@@ -27,6 +24,9 @@ class CreateUserPage extends Component {
         return <div key={index}>{user.username}</div>;
     }
 
+    handleError() {
+        
+    }
     render() {
         return (
             <Row className="justify-content-md-center">
@@ -39,8 +39,21 @@ class CreateUserPage extends Component {
                                 <small className="text-muted">Create</small>
                             </h1>
                             <hr />
-
-                            <AvForm onValidSubmit={this.submitForm}>
+                            <form onSubmit = {this.submitForm}>
+                                <PersonalForm />
+                                <FormGroup className="text-right">
+                                    <Link
+                                        to="/user"
+                                        className="btn btn-secondary"
+                                    >
+                                        Cancel
+                                    </Link>{' '}
+                                    <Button type="submit" color="primary">
+                                        Submit
+                                    </Button>
+                                </FormGroup>
+                            </form>
+                            {/* <AvForm onValidSubmit={this.submitForm}>
                                 <PersonalForm />
 
                                 <FormGroup className="text-right">
@@ -54,7 +67,7 @@ class CreateUserPage extends Component {
                                         Submit
                                     </Button>
                                 </FormGroup>
-                            </AvForm>
+        </AvForm> */}
                         </CardBody>
                     </Card>
                 </Col>
@@ -62,6 +75,10 @@ class CreateUserPage extends Component {
         );
     }
 }
+
+CreateUserPage.propTypes = {
+    createUser: PropTypes.func
+};
 
 // const mapStateToProps = (state, ownProps) => {
 //     return {

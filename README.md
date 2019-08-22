@@ -5,7 +5,10 @@
 
 An example web application built using React. https://react-web.francisade.com
 
-This application allows users to manage their weekly-monthly budget.
+Hints:
+Use JSX files for your components to allow syntax highling   easy style guide configuration (can easily use AirBnb eslint)
+
+This application allows users to manage their weekly budget.
 
 Technologies used:
 

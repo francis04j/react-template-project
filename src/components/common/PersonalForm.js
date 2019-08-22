@@ -1,11 +1,16 @@
 import React from 'react';
 import { FormGroup } from 'reactstrap';
 import { AvField } from 'availity-reactstrap-validation';
+import { NameInputField } from './NameInputField';
 
 const PersonalForm = () => (
     <React.Fragment>
         <FormGroup row>
-            <AvField
+            <NameInputField label="User Id" name="userId" tabIndex = {1} required reportError={this.reportError}/>
+            <NameInputField label="First Name" name="fname" tabIndex = {2} required/>
+            <NameInputField label="last Name" name="lname" tabIndex = {3} required/>
+            
+            {/* <AvField
                 name="username"
                 label="User Name"
                 required
@@ -31,13 +36,16 @@ const PersonalForm = () => (
                 type="date"
                 groupAttrs={{ className: 'form-field col-lg-6' }}
             />
-        </FormGroup>
-        <AvField
+            <AvField
             name="occupation"
             label="Occupation"
             groupAttrs={{ className: 'form-field' }}
-        />
+        /> */}
+        </FormGroup>
     </React.Fragment>
 );
 
+function reportError() {
+    
+}
 export default PersonalForm;
