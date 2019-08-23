@@ -1,4 +1,4 @@
-import  React, { props, Component } from 'react';
+import  React, { props } from 'react';
 import PropTypes from 'prop-types';
 
 export class NameInputField extends React.Component {

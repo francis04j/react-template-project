@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'; 
 import { Row, Col, Card, CardBody, FormGroup, Button } from 'reactstrap';
-import { AvForm } from 'availity-reactstrap-validation';
 import { Link } from 'react-router-dom';
-import PersonalForm from '../common/PersonalForm';
+import { PersonalForm } from '../common/PersonalForm';
 import { connect } from 'react-redux';
 import { createUser } from '../../actions/userActions';
 
@@ -53,21 +52,6 @@ class CreateUserPage extends Component {
                                     </Button>
                                 </FormGroup>
                             </form>
-                            {/* <AvForm onValidSubmit={this.submitForm}>
-                                <PersonalForm />
-
-                                <FormGroup className="text-right">
-                                    <Link
-                                        to="/user"
-                                        className="btn btn-secondary"
-                                    >
-                                        Cancel
-                                    </Link>{' '}
-                                    <Button type="submit" color="primary">
-                                        Submit
-                                    </Button>
-                                </FormGroup>
-        </AvForm> */}
                         </CardBody>
                     </Card>
                 </Col>
