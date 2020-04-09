@@ -13,7 +13,8 @@ export class NameInputField extends React.Component {
     static defaultProps = {
         name: "Sandy",
         placeHolder: "deepblue",
-        className: 'form-control'       
+        className: 'form-control',
+        errorMessage: 'Invalid input'       
     }
     
     validateInput = (e) => {
@@ -24,11 +25,11 @@ export class NameInputField extends React.Component {
         }
     }
     render() {
-        const {name, label, className, placeHolder, ...rest } = this.props;
+        const {name, label, className, placeHolder, errorMessage,  ...rest } = this.props;
         return (
             <div>
                 <label htmlFor={name}>{label}</label>
-                {this.state.showError &&  <label for={name}>Invalid input</label>}
+                {this.state.showError &&  <label for={name}>{errorMessage}</label>}
                 <input 
                     type='text' 
                     name={name} 
@@ -46,7 +47,8 @@ export class NameInputField extends React.Component {
 NameInputField.propTypes = {
     name: PropTypes.string,
     placeHolder: PropTypes.string,
-    className: PropTypes.string
+    className: PropTypes.string,
+    errorMessage: PropTypes.string
 }
 function hasNumber(inputText) {
     return /\d/.test(inputText);
