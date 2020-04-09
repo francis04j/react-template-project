@@ -1,10 +1,10 @@
 version: 1.0.{build}
 
 environment:
-  nodejs_version: "8"
+  nodejs_version: "10"
 
 install:
-- ps: Install-Product node 8
+- ps: Install-Product node 10
 - node -v
 
 build_script:
