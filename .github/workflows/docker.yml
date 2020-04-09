@@ -1,0 +1,22 @@
+name: Docker
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    deploy:
+        name: deploy
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - uses: docker/build-push-action@v1
+              with:
+                  username: DOCKER_USERNAME
+                  password: DOCKER_PASSWORD
+                  build_args: REACT_APP_API_URL=${{ secrets.REACT_APP_API_URL }}
+                  repository: francis04j/react-template-project
+                  tag_with_ref: true
+                  tag_with_sha: true
